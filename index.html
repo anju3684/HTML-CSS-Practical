@@ -5,35 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .dropdown{
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content{
-            display: none;
-            position:absolute;
-            background-color: #f9f9f9;
-            min-width: 200px;
-            box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.2);
-            padding:12px 16px;
-            z-index:1;
-        }
-        .dropdown:hover .dropdown-content{
-            display: block;
-        }
-
-        .button {
-            color: #2874f0;
-            font-weight: 500;
-            background-color: #fff;
-            cursor: pointer;
-            border-radius: 2px;
-            height: 32px;
-            padding: 5px 40px;
-            border: 1px solid #dbdbdb;
-            }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Flipkart Home Page</title>
 </head>
 <body bgcolor="#F1F3F6"> 
@@ -43,12 +16,19 @@
           <img src="logo.PNG">
         </td>
         <td>
-            <div class="topnav"><input type="search" placeholder="Search for products,brands and more">
-                </div>
-            </td>
-          <th>
+            <div class="search_bar_container">
+                <div class="search_bar">
+                    <form class="search flex">
+                <input type="search" placeholder="Search for products,brands and more" class="search_box">
+                <button class="btn_search"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            </div>
+            
+        </td>
+          <td>
               <button type="button" class="button">Login</button>
-          </th>
+          </td>
           <th><font color="white">
             <div class="dropdown">  
             <span>More</span></font>
@@ -63,11 +43,14 @@
           <th>
               <img src="cart.PNG">
           </th>
+          <td></td>
+          <td></td>
       </tr>  
     </table>
     <br>
     <table border="0" width="100%" bgcolor="white" height="20%">
         <tr>
+            <th><img src="offers.png" height="50"></th>
             <th><img src="Grocery.png" height="50"></th>
             <th><img src="mobiles.png" height="50"></th>
             <th><img src="Fashion.png" height="50"></th>
@@ -79,6 +62,7 @@
 
         </tr>
         <tr>
+            <th>Top offers</th>
             <th>Grocery</th>
             <th>mobiles</th>
             <th>Fashion</th>
@@ -89,29 +73,113 @@
             <th>Beauty,toys and more</th>
         </tr>
     </table>
-    <table border="0" width="100%" bgcolor="white" height="50%">
-        <tr>
-            <hr>
-        </tr>
-        <tr>
-            <td><h2>Deal of the day</h2></td>
-            <td colspan="5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
-                <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
-                <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
-              </svg></td>
-              <td><h3>22:07:36 left</h3></td>
-        </tr>
-        <tr>
-            <th><img src="sonata.jpeg" width="50%" height="90%"></th>
-            <th><img src="temple.jpeg" width="50%" height="90%"></th>
-            <th><img src="tablet.jpeg" width="50%" height="90%"></th>
-            <th><img src="home-decor.jpeg" width="50%" height="90%"></th>
-            <th><img src="metronaunts.jpeg" width="50%" height="90%"></th>
-            <th><img src="LAVA.jpeg" width="50%" height="90%"></th>
-        </tr>
-        <tr>
-            <th></th>
-        </tr>
-    </table>
+    <br>
+    <hr>
+  
+
+<!--  deal of the day section-->
+    <section>
+            <div class="common-heading">
+                <div class="common-heading-left">
+                 <h1><b>Deals of the day</b><i class="far fa-clock"></i>&ensp;22:36:07Left</h1>
+                </div>
+                <div class="common-heading-right">
+                  <button>view all</button>
+                </div>
+            </div>
+            <div class="card">
+            <div class="common-row">
+                <div class="common-col">
+                    <img src="sonata.jpeg" alt="watch">
+                    <h3>Cassio,Fastack,Sonata...</h3>
+                    <h4>Upto 80%+Extra 10%off</h4>
+                    <h6>knockout Deals!</h6>
+                </div>
+                <div class="common-col">
+                    <img src="temple.jpeg" alt="temple">
+                    <h3>Home Temple & more</h3>
+                    <h4>Extra 10%off</h4>
+                    <h6>Space Saving furniture</h6>
+                </div>
+                <div class="common-col">
+                    <img src="tablet.jpeg" alt="tablet">
+                    <h3>Premium Tablet Cases</h3>
+                    <h4>Extra 10% off</h4>
+                    <h6>For All Top Models</h6>
+                </div>
+                <div class="common-col">
+                    <img src="home-decor.jpeg" alt="home-decor">
+                    <h3>Best of Home Decor</h3>
+                    <h4>From <span>&#8377;</span>79</h4>
+                    <h6>Lowest Price Ever</h6>
+                </div>
+                <div class="common-col">
+                    <img src="metronaunts.jpeg" alt="tshirts">
+                    <h3>Metronaut,Provogue &...</h3>
+                    <h4>From <span>&#8377;</span>249+Extra10%off</h4>
+                    <h6>Jackets,Dresses &More</h6>
+                </div>
+                <div class="common-col">
+                    <img src="LAVA.jpeg" alt="mobile">
+                    <h3>LAVA A1500</h3>
+                    <h4>Flate <span>&#8377;</span>830 off</h4>
+                    <h6>Now<i class="fas fa-rupee-sign"></i>999</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <div class="common-heading">
+             <div class="common-heading-left">
+                 <h1>Books and music Instruments</h1>
+                 <h2>Shop Now!</h2>
+             </div>
+             <div class="common-heading-right">
+                 <button>view all</button>
+             </div>
+            </div>
+            <div class="common-row">
+             <div class="common-col col-headphones">
+                 <img src="harmoniums.jpeg" alt="harmoniums">
+                 <h3> Harmoniums</h3>
+                 <h4>Up to 60% off</h4>
+                 <h6>Shop Now!</h6>
+             </div>
+             <div class="common-col col-headphones">
+                 <img src="flutes.jpeg" alt="mobile">
+                 <h3>Flutes</h3>
+                 <h4>Up to 80% off</h4>
+                 <h6>Shop Now!</h6>
+             </div>
+             <div class="common-col col-headphones">
+                 <img src="acoustic.jpeg" alt="mobile">
+                 <h3>Acoustic Guitars</h3>
+                 <h4>Starting <span>&#8377;</span>1799</h4>
+                 <h6>Shop Now!</h6>
+             </div>
+             <div class="common-col col-headphones">
+                 <img src="musical-acce.jpeg" alt="mobile">
+                 <h3>Musical Accessories</h3>
+                 <h4>Up to 80% off</h4>
+                 <h6>Shop Now!</h6>
+             </div>
+             <div class="common-col col-headphones">
+                 <img src="microphone.jpeg" alt="mobile">
+                 <h3>Microphone Accessories</h3>
+                 <h4>Up to 80% off</h4>
+                 <h6>Shop Now!</h6>
+             </div>
+             <div class="common-col col-headphones">
+                 <img src="acoustic.jpeg" alt="mobile">
+                 <h3>Acoustic Guitars</h3>
+                 <h4>Starting <span>&#8377;</span>1999</h4>
+                 <h6>By Revel</h6>
+             </div>
+             
+         </div>
+        </div>
+    </section>
 </body>
 </html>
